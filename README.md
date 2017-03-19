@@ -1,7 +1,7 @@
 About mrjob
 ===========
 
-Home: http://github.com/Yelp/mrjob
+Home: https://github.com/Yelp/mrjob
 
 Package license: Apache 2.0
 
