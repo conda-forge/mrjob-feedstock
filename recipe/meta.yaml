@@ -1,15 +1,17 @@
 {%set name = "mrjob" %}
 {%set version = "0.5.8" %}
+{%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
 {%set hash_val = "6e60a4277798ca5c3d0271c1bd7484c6da7a81eac5b7b41c4dac972ce54e90ff" %}
+{%set build_num = "0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  fn: {{ name }}-{{ version }}.{{ compress_type }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ compress_type }}
   {{ hash_type }}: {{ hash_val }}
 
 build:
@@ -21,8 +23,8 @@ build:
     - mrjob-2.7=mrjob.cmd:main  # [py27]
     - mrjob-3.4=mrjob.cmd:main  # [py34]
     - mrjob-3.5=mrjob.cmd:main  # [py35]
-  
-  number: 0
+
+  number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
@@ -60,12 +62,12 @@ test:
     - mrjob-3.5 --help  # [py35]
 
 about:
-  home: http://github.com/Yelp/mrjob
-  license: Apache 2.0
+  home: https://github.com/Yelp/mrjob
   license_file: LICENSE.txt
+  license: Apache 2.0
   license_family: Apache
   summary: 'Python MapReduce framework'
-  dev_url: http://github.com/Yelp/mrjob
+  dev_url: https://github.com/Yelp/mrjob
   doc_url: https://pythonhosted.org/mrjob/
 
 extra:
