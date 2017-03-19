@@ -1,7 +1,7 @@
 About mrjob
 ===========
 
-Home: http://github.com/Yelp/mrjob
+Home: https://github.com/Yelp/mrjob
 
 Package license: Apache 2.0
 
@@ -10,6 +10,18 @@ Feedstock license: BSD 3-Clause
 Summary: Python MapReduce framework
 
 
+
+Current build status
+====================
+
+Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mrjob-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mrjob-feedstock)
+OSX: [![TravisCI](https://travis-ci.org/conda-forge/mrjob-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mrjob-feedstock)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mrjob-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mrjob-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mrjob/badges/version.svg)](https://anaconda.org/conda-forge/mrjob)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mrjob/badges/downloads.svg)](https://anaconda.org/conda-forge/mrjob)
 
 Installing mrjob
 ================
@@ -31,7 +43,6 @@ It is possible to list all of the versions of `mrjob` available on your platform
 ```
 conda search mrjob --channel conda-forge
 ```
-
 
 
 About conda-forge
@@ -67,18 +78,6 @@ Terminology
 
 **conda-forge** - the place where the feedstock and smithy live and work to
                   produce the finished article (built conda distributions)
-
-Current build status
-====================
-
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/mrjob-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/mrjob-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/mrjob-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/mrjob-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/mrjob-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/mrjob-feedstock/branch/master)
-
-Current release info
-====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mrjob/badges/version.svg)](https://anaconda.org/conda-forge/mrjob)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/mrjob/badges/downloads.svg)](https://anaconda.org/conda-forge/mrjob)
 
 
 Updating mrjob-feedstock
