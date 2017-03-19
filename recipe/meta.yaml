@@ -15,7 +15,6 @@ source:
   {{ hash_type }}: {{ hash_val }}
 
 build:
-  skip: True  # [py35 and win]
   entry_points:
     - mrjob=mrjob.cmd:main
     - mrjob-2=mrjob.cmd:main  # [py2k]
@@ -23,6 +22,7 @@ build:
     - mrjob-2.7=mrjob.cmd:main  # [py27]
     - mrjob-3.4=mrjob.cmd:main  # [py34]
     - mrjob-3.5=mrjob.cmd:main  # [py35]
+    - mrjob-3.6=mrjob.cmd:main  # [py36]
 
   number: {{ build_num }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
@@ -35,10 +35,11 @@ requirements:
   run:
     - python
     - boto >=2.35.0
+    - boto3 >=1.4.4
+    - botocore >=1.5.0
     - filechunkio
     - pyyaml >=3.08
-    - httplib2 >=0.8,<1  # [py3k and py<33]
-    - google-api-python-client >=1.5.0  # [py2k or py>=33]
+    - google-api-python-client >=1.5.0
     - ujson
 
 test:
@@ -60,6 +61,7 @@ test:
     - mrjob-2.7 --help  # [py27]
     - mrjob-3.4 --help  # [py34]
     - mrjob-3.5 --help  # [py35]
+    - mrjob-3.6 --help  # [py36]
 
 about:
   home: https://github.com/Yelp/mrjob
