@@ -1,8 +1,8 @@
 {%set name = "mrjob" %}
-{%set version = "0.5.8" %}
+{%set version = "0.5.9" %}
 {%set compress_type = "tar.gz" %}
 {%set hash_type = "sha256" %}
-{%set hash_val = "6e60a4277798ca5c3d0271c1bd7484c6da7a81eac5b7b41c4dac972ce54e90ff" %}
+{%set hash_val = "79bf2dc1e4a3f5b8fbebaef9d20cbe3853110042e75d23231517de7a7e2f09b5" %}
 {%set build_num = "0" %}
 
 package:
