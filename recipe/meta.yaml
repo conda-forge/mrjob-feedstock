@@ -39,8 +39,6 @@ requirements:
     - pyyaml >=3.08
     - google-api-python-client >=1.5.0
     - rapidjson  # [py3k]
-    
-    
 
 test:
   imports:
