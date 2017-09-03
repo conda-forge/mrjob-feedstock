@@ -34,8 +34,8 @@ requirements:
   run:
     - python
     - ujson
-    - boto3 >=1.4.4
-    - botocore >=1.5.0
+    - boto3 >=1.4.6
+    - botocore >=1.6.0
     - pyyaml >=3.08
     - google-api-python-client >=1.5.0
     - rapidjson  # [py3k]
