@@ -1,8 +1,8 @@
 {% set name = "mrjob" %}
-{% set version = "0.5.10" %}
+{% set version = "0.6.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "41f657aeb22df8af1391bbd907a9034f10129a691bdbe074aa583f9ae01d8554" %}
+{% set hash = "a1fd13528be1290b7ba2e13e1f26882a77170b4eaea2e58a945d766c0355df87" %}
 {% set build = 0 %}
 
 package:
@@ -16,15 +16,16 @@ source:
 
 build:
   entry_points:
-    - mrjob=mrjob.cmd:main
-    - mrjob-2=mrjob.cmd:main  # [py2k]
-    - mrjob-3=mrjob.cmd:main  # [py3k]
-    - mrjob-2.7=mrjob.cmd:main  # [py27]
-    - mrjob-3.5=mrjob.cmd:main  # [py35]
-    - mrjob-3.6=mrjob.cmd:main  # [py36]
+    - mrjob = mrjob.cmd:main
+    - mrjob-2 = mrjob.cmd:main  # [py2k]
+    - mrjob-3 = mrjob.cmd:main  # [py3k]
+    - mrjob-2.7 = mrjob.cmd:main  # [py27]
+    - mrjob-3.5 = mrjob.cmd:main  # [py35]
+    - mrjob-3.6 = mrjob.cmd:main  # [py36]
 
   number: {{ build }}
   script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
 
 requirements:
   build:
@@ -34,8 +35,8 @@ requirements:
   run:
     - python
     - ujson
-    - boto3 >=1.4.4
-    - botocore >=1.5.0
+    - boto3 >=1.4.6
+    - botocore >=1.6.0
     - pyyaml >=3.08
     - google-api-python-client >=1.5.0
     - rapidjson  # [py3k]
@@ -44,7 +45,6 @@ test:
   imports:
     - mrjob
     - mrjob.examples
-    - mrjob.examples.bash_wrap
     - mrjob.examples.mr_postfix_bounce
     - mrjob.examples.mr_travelling_salesman
     - mrjob.fs
