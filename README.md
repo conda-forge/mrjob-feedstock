@@ -14,8 +14,9 @@ Summary: Python MapReduce framework
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/mrjob-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/mrjob-feedstock)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/mrjob-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/mrjob-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/mrjob-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/mrjob-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/mrjob-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/mrjob-feedstock/branch/master)
 
 Current release info
 ====================
