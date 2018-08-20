@@ -10,7 +10,7 @@ package:
 
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
   {{ hash_type }}: {{ hash }}
 
 build:
@@ -23,13 +23,13 @@ build:
     - mrjob-3.6 = mrjob.cmd:main  # [py36]
 
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  script: python -m pip install --no-deps --ignore-installed --no-cache-dir -vvv .
   noarch: python
 
 requirements:
-  build:
+  host:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
@@ -37,7 +37,9 @@ requirements:
     - boto3 >=1.4.6
     - botocore >=1.6.0
     - pyyaml >=3.08
-    - google-api-python-client >=1.5.0
+    - google-cloud-dataproc >=0.2.0
+    - google-cloud-logging >=1.5.0
+    - google-cloud-storage >=1.9.0
     - rapidjson  # [py3k]
 
 test:
