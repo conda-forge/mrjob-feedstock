@@ -19,18 +19,15 @@ build:
     - mrjob-2 = mrjob.cmd:main  # [py2k]
     - mrjob-3 = mrjob.cmd:main  # [py3k]
     - mrjob-2.7 = mrjob.cmd:main  # [py27]
-    - mrjob-3.5 = mrjob.cmd:main  # [py35]
     - mrjob-3.6 = mrjob.cmd:main  # [py36]
-
+    - mrjob-3.7 = mrjob.cmd:main  # [py37]   
   number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
-  noarch: python
 
 requirements:
   build:
     - python
     - setuptools
-
   run:
     - python
     - ujson
@@ -56,7 +53,7 @@ test:
     - mrjob-2 --help  # [py2k]
     - mrjob-3 --help  # [py3k]
     - mrjob-2.7 --help  # [py27]
-    - mrjob-3.5 --help  # [py35]
+    - mrjob-3.7 --help  # [py37]
     - mrjob-3.6 --help  # [py36]
 
 about:
@@ -71,3 +68,4 @@ about:
 extra:
   recipe-maintainers:
     - pmlandwehr
+    - mariusvniekerk
