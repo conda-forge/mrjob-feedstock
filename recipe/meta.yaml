@@ -21,7 +21,7 @@ build:
     - mrjob-2.7 = mrjob.cmd:main  # [py27]
     - mrjob-3.6 = mrjob.cmd:main  # [py36]
     - mrjob-3.7 = mrjob.cmd:main  # [py37]   
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
