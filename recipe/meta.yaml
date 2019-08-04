@@ -1,8 +1,8 @@
 {% set name = "mrjob" %}
-{% set version = "0.6.7" %}
+{% set version = "0.6.10" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "3ba27276e213d317efdd7183044d95f93c3a2175b16016f6b6506aeae1cd54d4" %}
+{% set hash = "0d2eb2a0b18f02db6e370412493ca6a2fa94777d5137d10d2246cb6ffc9cef99" %}
 
 package:
   name: {{ name|lower }}
