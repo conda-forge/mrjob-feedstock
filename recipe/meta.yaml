@@ -1,8 +1,8 @@
 {% set name = "mrjob" %}
-{% set version = "0.6.12" %}
+{% set version = "0.7.1" %}
 {% set bundle = "tar.gz" %}
 {% set hash_type = "sha256" %}
-{% set hash = "29a4691165787f5e3e924b48635101afaadbbbf5361f0b99aa5231243e1bcb21" %}
+{% set hash = "d7d455ce8cd790e3f723091f4bf4e962d40d8357ac38d51c1ad8b0ede64c77e7" %}
 
 package:
   name: {{ name|lower }}
@@ -41,8 +41,6 @@ test:
   imports:
     - mrjob
     - mrjob.examples
-    - mrjob.examples.mr_postfix_bounce
-    - mrjob.examples.mr_travelling_salesman
     - mrjob.fs
     - mrjob.logs
     - mrjob.tools
