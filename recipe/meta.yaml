@@ -1,7 +1,6 @@
 {% set name = "mrjob" %}
 {% set version = "0.7.1" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
 {% set hash = "d7d455ce8cd790e3f723091f4bf4e962d40d8357ac38d51c1ad8b0ede64c77e7" %}
 
 package:
@@ -11,7 +10,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   entry_points:
@@ -21,7 +20,7 @@ build:
     - mrjob-2.7 = mrjob.cmd:main  # [py27]
     - mrjob-3.6 = mrjob.cmd:main  # [py36]
     - mrjob-3.7 = mrjob.cmd:main  # [py37]   
-  number: 0
+  number: 1
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
