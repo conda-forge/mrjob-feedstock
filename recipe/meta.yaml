@@ -1,8 +1,7 @@
 {% set name = "mrjob" %}
-{% set version = "0.7.1" %}
+{% set version = "0.7.2" %}
 {% set bundle = "tar.gz" %}
-{% set hash_type = "sha256" %}
-{% set hash = "d7d455ce8cd790e3f723091f4bf4e962d40d8357ac38d51c1ad8b0ede64c77e7" %}
+{% set hash = "4ef43839de63d2822f5c92475b7eb2c9cce1c6212407eb5ef0980f196112c482" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +10,7 @@ package:
 source:
   fn: {{ name }}-{{ version }}.{{ bundle }}
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  {{ hash_type }}: {{ hash }}
+  sha256: {{ hash }}
 
 build:
   entry_points:
@@ -59,7 +58,7 @@ about:
   license_file: LICENSE.txt
   license: Apache 2.0
   license_family: Apache
-  summary: 'Python MapReduce framework'
+  summary: Python MapReduce framework
   dev_url: https://github.com/Yelp/mrjob
   doc_url: https://pythonhosted.org/mrjob/
 
