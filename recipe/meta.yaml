@@ -1,7 +1,7 @@
 {% set name = "mrjob" %}
-{% set version = "0.7.3" %}
+{% set version = "0.7.4" %}
 {% set bundle = "tar.gz" %}
-{% set hash = "7aa7df76fecdc04905a47657792ae09e5293e68b1f73e9c291c086e7c72cee74" %}
+{% set hash = "2c8d8dc8aa4b354a97de18d0260f551f018693af74af104b3d41daf165eebdd4" %}
 
 package:
   name: {{ name|lower }}
@@ -20,11 +20,11 @@ build:
     - mrjob-2.7 = mrjob.cmd:main  # [py27]
     - mrjob-3.6 = mrjob.cmd:main  # [py36]
     - mrjob-3.7 = mrjob.cmd:main  # [py37]   
-  number: 1
+  number: 0
   script: python setup.py install --single-version-externally-managed --record=record.txt
 
 requirements:
-  build:
+  host:
     - python
     - setuptools
   run:
