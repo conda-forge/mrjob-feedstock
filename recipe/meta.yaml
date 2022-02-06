@@ -18,10 +18,10 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=2.7
     - pip
   run:
-    - python
+    - python >=2.7
     - ujson
     - boto3 >=1.4.6
     - botocore >=1.6.0
