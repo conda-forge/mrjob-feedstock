@@ -1,32 +1,25 @@
 {% set name = "mrjob" %}
 {% set version = "0.7.4" %}
-{% set bundle = "tar.gz" %}
-{% set hash = "2c8d8dc8aa4b354a97de18d0260f551f018693af74af104b3d41daf165eebdd4" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.{{ bundle }}
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.{{ bundle }}
-  sha256: {{ hash }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gzt
+  sha256: 2c8d8dc8aa4b354a97de18d0260f551f018693af74af104b3d41daf165eebdd4
 
 build:
   entry_points:
     - mrjob = mrjob.cmd:main
-    - mrjob-2 = mrjob.cmd:main  # [py2k]
-    - mrjob-3 = mrjob.cmd:main  # [py3k]
-    - mrjob-2.7 = mrjob.cmd:main  # [py27]
-    - mrjob-3.6 = mrjob.cmd:main  # [py36]
-    - mrjob-3.7 = mrjob.cmd:main  # [py37]   
-  number: 1
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  number: 2
+  noarch: python
+  script: python -m pip install -vv .
 
 requirements:
   host:
     - python
-    - setuptools
+    - pip
   run:
     - python
     - ujson
@@ -34,7 +27,7 @@ requirements:
     - botocore >=1.6.0
     - pyyaml >=3.08
     - google-api-python-client >=1.5.0
-    - rapidjson  # [py3k]
+    - rapidjson
 
 test:
   imports:
@@ -47,11 +40,6 @@ test:
 
   commands:
     - mrjob --help
-    - mrjob-2 --help  # [py2k]
-    - mrjob-3 --help  # [py3k]
-    - mrjob-2.7 --help  # [py27]
-    - mrjob-3.7 --help  # [py37]
-    - mrjob-3.6 --help  # [py36]
 
 about:
   home: https://github.com/Yelp/mrjob
