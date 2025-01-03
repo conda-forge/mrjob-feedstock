@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 2c8d8dc8aa4b354a97de18d0260f551f018693af74af104b3d41daf165eebdd4
 
 build:
   entry_points:
     - mrjob = mrjob.cmd:main
-  number: 2
+  number: 3
   noarch: python
   script: python -m pip install -vv .
 
 requirements:
   host:
-    - python >=2.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=2.7
+    - python >={{ python_min }}
     - ujson
     - boto3 >=1.4.6
     - botocore >=1.6.0
@@ -30,6 +30,8 @@ requirements:
     - rapidjson
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - mrjob
     - mrjob.examples
